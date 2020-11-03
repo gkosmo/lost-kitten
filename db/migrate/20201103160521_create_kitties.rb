@@ -7,6 +7,8 @@ class CreateKitties < ActiveRecord::Migration[6.0]
       t.string :image_url
       t.string :name
       t.date :found_on
+      t.boolean :found, default: false
+
 
       t.timestamps
     end

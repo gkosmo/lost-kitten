@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_11_03_160521) do
     t.string "image_url"
     t.string "name"
     t.date "found_on"
+    t.boolean "found", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

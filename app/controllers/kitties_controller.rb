@@ -24,7 +24,7 @@ class KittiesController < ApplicationController
   def update
     @kitty = Kitty.find(params[:id])
     @kitty.update(kitty_params)
-    redirect_to kitty_path(@kitty)
+    redirect_to kitties_path
   end
 
   def destroy
@@ -36,6 +36,6 @@ class KittiesController < ApplicationController
   private
 
   def kitty_params
-    params.require(:kitty).permit(:name, :address, :phone_number, :species, :found_on, :image_url)
+    params.require(:kitty).permit(:found, :name, :address, :phone_number, :species, :found_on, :image_url)
   end
 end
