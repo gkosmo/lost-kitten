@@ -1,0 +1,7 @@
+<h1> <%= @kitty.name %> </h1>
+<p> found at <%= @kitty.address %> </p>
+<p> It is a <%= @kitty.species %> </p>
+<p> Found <%= @kitty.days_since_found %> </p>
+<p> To get it back, call the <%= @kitty.phone_number %> </p>
+
+<%= image_tag @kitty.image_url if @kitty.image_url %>

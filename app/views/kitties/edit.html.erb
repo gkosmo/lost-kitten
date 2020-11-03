@@ -1,0 +1,10 @@
+<h1>Edit your Pet</h1>
+<%= simple_form_for @kitty do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :species, collection: Kitty::SPECIES %>
+  <%= f.input :found_on %>
+  <%= f.input :image_url %>
+  <%= f.input :phone_number %>
+  <%= f.button :submit %>
+<% end %>
